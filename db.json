@@ -1,0 +1,9 @@
+{
+    "produtos": [
+        {
+            "id": "1234",
+            "name": "Buscopan",
+            "price": "20,90"
+        }
+    ]
+}
