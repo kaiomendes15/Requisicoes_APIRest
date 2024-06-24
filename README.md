@@ -14,7 +14,7 @@
 - ***DELETE*** -> remover/deletar informações no json 
     (status: **INICIAR**)
 
-===
+----------------------------
 
 ## atualizar o conteúdo no momento em que as mudanças ocorrerem
 
