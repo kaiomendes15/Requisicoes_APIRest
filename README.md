@@ -16,10 +16,10 @@
 
 ----------------------------
 
-## atualizar o conteúdo no momento em que as mudanças ocorrerem
+## atualizar o conteúdo no momento em que as mudanças ocorrerem (status: **1/4**)
 
-## implementar estoque
+## implementar estoque (status: **INICIAR**)
 
-## utilizar bootstrap
+## utilizar bootstrap (status: **INICIAR**)
 
-## usar api json-server para simular o crud
+## usar api json-server para simular o crud (status: **OK**)
