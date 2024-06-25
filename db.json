@@ -2,15 +2,15 @@
     "produtos": [
         {
             "id": "1234",
-            "name": "Buscopan",
-            "price": "20,90",
+            "nome": "Buscopan",
+            "preco": "20,90",
             "image": "https://www.buscopan.com.br/assets/images/produtos/buscopan-composto.webp",
             "descricao": "remedio que cura tudo"
         },
         {
             "id": "1235",
-            "name": "Paracetamol",
-            "price": "12,50",
+            "nome": "Paracetamol",
+            "preco": "12,50",
             "image": "https://www.buscopan.com.br/assets/images/produtos/buscopan-composto.webp",
             "descricao": "remedio que cura quase tudo"
         }
