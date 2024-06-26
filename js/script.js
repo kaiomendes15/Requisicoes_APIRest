@@ -106,6 +106,19 @@ async function salvarProduto() {
     reader.readAsDataURL(image);
 }
 
+// * PUT
+
+function updateUser(id, name, quantidade, preco) {
+    const users = getUsers();
+    const index = users.findIndex(user => user.id === id);
+    if (index !== -1) {
+        users[index].name = name;
+        users[index].quantidade = quantidade;
+        users[index].preco = preco;
+        localStorage.setItem('users', JSON.stringify(users));
+    }
+}
+
 // Call the function to load users when the page loads
 document.addEventListener('DOMContentLoaded', carregarProdutos);
 document.getElementById('btn-salvarProduto').addEventListener('click', salvarProduto)
