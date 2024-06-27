@@ -15,7 +15,7 @@ async function carregarProdutos() {
 function alimentarCards(produtos) {
     const htmlCards = produtos.map(item => `
         <div class="card">
-            <img src="${item.image}" alt="${item.nome}" style="width: 50px;">
+            <img src="${item.image}" alt="${item.nome}" style="width: 100px;">
             <h3>${item.nome}</h3>
             <p>${item.descricao}</p>
             <h4>${item.preco}</h4>
@@ -36,7 +36,7 @@ function alimentarCards(produtos) {
                         <form id="form-usuario-${item.id}">
                             <div class="mb-3">
                                 <label for="image-${item.id}">Imagem</label>
-                                <input type="file" class="form-control" id="image-${item.id}" name="image" value="${item.image}">
+                                <input type="file" class="form-control" id="image-${item.id}" name="image" ">
                             </div>
                             <div class="mb-3">
                                 <label for="nome-${item.id}" class="form-label"></label>
@@ -66,6 +66,7 @@ function alimentarCards(produtos) {
 
     produtos.forEach(item => {
         document.getElementById(`btnEdit-${item.id}`).addEventListener('click', () => editarProdutos(item.id));
+        document.getElementById(`delete-${item.id}`).addEventListener('click', () => deletarProdutos(item.id)); // Adiciona o listener para deletar produtos
     });
 }
 
@@ -173,6 +174,32 @@ async function editarProdutos(id) {
     }
 }
 
-// Call the function to load users when the page loads
+// * DELETE
+
+async function deletarProdutos(id) {
+    const requestMethod = {
+        method: "DELETE"
+    };
+    try {
+        const response = await fetch(`${urlApi}/${id}`, requestMethod);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        carregarProdutos();
+    } catch (error) {
+        console.error('Error editing product:', error);
+        Swal.fire({
+            title: "Erro ao editar produto",
+            text: error.message,
+            icon: "error"
+        });
+    }
+}
+
+
+// Chama a função para carregar os produtos
+// ? GET
 document.addEventListener('DOMContentLoaded', carregarProdutos);
+
+// ? BOTÃO SALVAR
 document.getElementById('btn-salvarProduto').addEventListener('click', salvarProduto);
+
+

@@ -9,19 +9,19 @@
     (status: **OK**)
 
 - ***PUT*** -> editar informações no json 
-    (status: **INICIAR**)
+    (status: **OK**)
 
 - ***DELETE*** -> remover/deletar informações no json 
-    (status: **INICIAR**)
+    (status: **OK**)
 
 ----------------------------
 
-## atualizar o conteúdo no momento em que as mudanças ocorrerem (status: **2/4**)
+## atualizar o conteúdo no momento em que as mudanças ocorrerem (status: **OK**)
 
-## implementar estoque (status: **INICIAR**)
+## implementar estoque (status: **OK**)
 
 ## utilizar bootstrap (status: **OK**)
 
-- Mostrar uma mensagem de erro quando não preencher campos do post
+- Mostrar uma mensagem de erro quando não preencher campos do post (status: **iniciar**)
 
 ## usar api json-server para simular o crud (status: **OK**)
