@@ -64,9 +64,11 @@ function alimentarCards(produtos) {
 
     document.getElementById('card').innerHTML = htmlCards;
 
+    
+    // ! APLICANDO OS BOTÕES DAS FUNÇÕES EDIT E DELETE DENTRO DO CONTEXTO ONDE O ITEM.ID ESTÁ INSERIDO
     produtos.forEach(item => {
         document.getElementById(`btnEdit-${item.id}`).addEventListener('click', () => editarProdutos(item.id));
-        document.getElementById(`delete-${item.id}`).addEventListener('click', () => deletarProdutos(item.id)); // Adiciona o listener para deletar produtos
+        document.getElementById(`delete-${item.id}`).addEventListener('click', () => deletarProdutos(item.id)); 
     });
 }
 
