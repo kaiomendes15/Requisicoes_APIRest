@@ -15,14 +15,21 @@ async function carregarProdutos() {
 function alimentarCards(produtos) {
     const htmlCards = produtos.map(item => `
         <div class="card">
-            <img src="${item.image}" alt="${item.nome}" style="width: 100px;">
-            <h3>${item.nome}</h3>
-            <p>${item.descricao}</p>
-            <h4>${item.preco}</h4>
-            <button type="button" class="btn btn-danger" id="delete-${item.id}">Deletar</button>
-            
-            <!-- ? MODAL EDITAR (PUT) -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop-${item.id}" id="editar-${item.id}">Editar</button>
+            <div class="card-content">
+                <div class="img">
+                    <img src="${item.image}" alt="${item.nome}" >
+                </div>
+                <h3>${item.nome}</h3>
+                <p>${item.descricao}</p>
+                <h4>${item.preco} R$</h4>
+            </div>
+
+            <div class="alinhar-botoes">
+                <button type="button" class="btn btn-danger" id="delete-${item.id}">Deletar</button>
+                
+                <!-- ? MODAL EDITAR (PUT) -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop-${item.id}" id="editar-${item.id}">Editar</button>
+            </div>
         
             <!-- Modal -->
             <div class="modal fade" id="staticBackdrop-${item.id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
